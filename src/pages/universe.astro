@@ -1,0 +1,102 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const categories = [
+  {
+    title: "Consoles",
+    image: "/images/nintendo-switch.webp",
+    imageAlt: "A person playing on a Nintendo Switch",
+    links: [
+      { label: "Nintendo Switch", href: "/nintendo-switch" },
+      { label: "Nintendo DS", href: "/nintendo-ds" },
+      { label: "Wii", href: "/wii" },
+    ],
+  },
+  {
+    title: "Characters",
+    subtitle: null,
+    image: "/images/mario.webp",
+    imageAlt: "Mario",
+    links: [
+      { label: "Main characters", href: "/main-characters" },
+      { label: "Monsters & villains", href: "/monsters-and-villains" },
+    ],
+  },
+  {
+    title: "Power-ups",
+    subtitle: null,
+    image: "/images/mushroom.webp",
+    imageAlt: "A mushroom power-up",
+    links: [
+      { label: "Flower power-ups", href: "/flower-powerups" },
+      { label: "Mushroom power-ups", href: "/mushroom-powerups" },
+      { label: "Special power-ups", href: "/special-powerups" },
+    ],
+  },
+];
+---
+
+<MainLayout title="The Universe — The Great Mushroom Kingdom Wiki">
+  <!-- Page Hero + Story -->
+  <section class="max-w-5xl mx-auto px-6 py-14 fade-in-up">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-[#E52521] mb-8 leading-tight">The universe</h1>
+
+    <!-- Story Section -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">The story in short</h2>
+      <p class="text-base text-gray-700 leading-relaxed mb-4">
+        The story of Mario starts in 1983, when the first game <strong>Mario Bros.</strong> was released as an arcade game. Since then, many other titles
+        have been introduced into the popular game franchise about everyone's favourite plumber. And there are over 200 games in total to look at.
+      </p>
+      <p class="text-base text-gray-700 leading-relaxed mb-4">
+        The main plot of the Mario games has its beginning in <strong>Super Mario Bros.</strong>, which is the next, but technically the first
+        official instalment in the series. Released on the NES (Nintendo Entertainment System) in 1985, two years after the first, you are given the
+        task of rescuing Princess Toadstool (Peach) who has been kidnapped by Bowser&mdash; the king of the koopas.
+      </p>
+      <p class="text-base text-gray-700 leading-relaxed">
+        This is a thing that repeats itself throughout most of the games. And it's one of the things that the Mario games are known for. Clear the
+        worlds, save the princess. Below you can find almost everything about the Mario-universe&mdash; from the characters, the power-ups, and even
+        some of the consoles. So, go bananas!
+      </p>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="max-w-5xl mx-auto px-6 py-14 fade-in-up-delayed">
+    <h2 class="text-3xl font-extrabold text-[#E52521] mb-3">Explore the categories</h2>
+    <p class="text-sm text-gray-500 italic mb-8">
+      <strong>Note:</strong> This is a curated selection of characters, power-ups, and consoles— not a comprehensive list of everything in the Mario universe.
+    </p>
+
+    <!-- Category Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        categories.map((cat) => (
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col interactive-lift">
+            <div class="wiki-image-soft p-4">
+              <img src={cat.image} alt={cat.imageAlt} class="w-full h-40 object-contain" />
+            </div>
+
+            <div class="p-6 flex flex-col flex-1">
+              <h2 class="text-xl font-extrabold text-[#E52521] mb-1">{cat.title}</h2>
+              {cat.subtitle && <p class="text-xs text-gray-500 mb-3 italic">{cat.subtitle}</p>}
+              <ul class="mt-auto space-y-2">
+                {cat.links.map((link) => (
+                  <li>
+                    <a
+                      href={link.href}
+                      class="flex items-center gap-2 text-[#049CD8] font-semibold hover:underline underline-offset-4 interactive-link"
+                    >
+                      <span class="text-[#E52521]">◦</span>
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>

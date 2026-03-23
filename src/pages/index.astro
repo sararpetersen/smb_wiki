@@ -1,15 +1,241 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+
+const quizQuestions = [
+  {
+    question: "In what game does Mario work together with Bowser Jr. in order to save Bowser?",
+    hint: "It's a DLC-pack.",
+    answers: ["bowsers fury", "bowser's fury", "super mario 3d world bowsers fury", "super mario 3d world + bowsers fury"],
+  },
+  {
+    question: "Which Mario game introduced Cappy as Mario's companion?",
+    hint: "Think Nintendo Switch launch years.",
+    answers: ["super mario odyssey", "mario odyssey"],
+  },
+  {
+    question: "Who is the ruler of the Mushroom Kingdom?",
+    hint: "She's often rescued by Mario.",
+    answers: ["princess peach", "peach", "princess toadstool"],
+  },
+  {
+    question: "What power-up makes Mario temporarily invincible?",
+    hint: "It twinkles and plays a special theme.",
+    answers: ["super star", "star", "starman", "invincibility star"],
+  },
+  {
+    question: "Which console introduced the dual-screen setup used by many Mario handheld games?",
+    hint: "A very popular Nintendo handheld from 2004.",
+    answers: ["nintendo ds", "ds"],
+  },
+];
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="Home — The Great Mushroom Kingdom Wiki">
+  <!-- Hero Section -->
+  <section class="max-w-5xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center gap-10 fade-in-up">
+    <div class="flex-1">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[#E52521] mb-6 leading-tight">Welcome!</h1>
+      <p class="text-lg leading-relaxed mb-4">
+        Here on the great Mushroom Kingdom wiki, you'll find almost all things Mario and consoles. Go to the <a
+          href="/universe"
+          class="text-[#E52521] font-semibold underline underline-offset-4 hover:text-[#B81C19] interactive-link">Universe</a
+        > menu to find the different wiki pages or the
+        <a href="/about" class="text-[#E52521] font-semibold underline underline-offset-4 hover:text-[#B81C19] interactive-link">Information</a> page to
+        learn more about the website!
+      </p>
+      <p class="text-base text-gray-700 leading-relaxed mb-3">
+        For over 40 years, Mario has been a cultural icon in the gaming world. From humble arcade beginnings to exploring sprawling 3D kingdoms, the
+        plumber has evolved and adapted across countless adventures. Whether you're here to dive deeper into specific games, characters, or consoles,
+        you'll find everything you need to explore the Mushroom Kingdom.
+      </p>
+      <p class="text-base text-gray-700 leading-relaxed">
+        This wiki celebrates the franchise in all its forms— from the classic pixel-art era to modern masterpieces. Discover the power-ups that have
+        saved the day, the villains that have caused chaos, and the consoles that brought these adventures to life.
+      </p>
+    </div>
+    <div class="flex-1 flex justify-center">
+      <img
+        src="/images/front-image.webp"
+        alt="Graffiti-art of Mario holding an NES controller"
+        class="rounded-2xl shadow-lg w-full max-w-xs md:max-w-sm max-h-[24rem] object-contain interactive-lift"
+      />
+    </div>
+  </section>
+
+  <!-- Consoles that shaped Mario Section -->
+  <section class="max-w-5xl mx-auto px-6 py-14 fade-in-up-delayed">
+    <h2 class="text-3xl font-extrabold text-[#E52521] mb-3">Consoles that shaped Mario</h2>
+    <p class="text-base text-gray-700 leading-relaxed mb-8">A quick look at the Nintendo systems that helped define different eras of Mario games.</p>
+    <div class="flex flex-col md:flex-row gap-10 items-start">
+      <div class="flex-1">
+        <img
+          src="/images/switch3.webp"
+          alt="Nintendo Switch gameplay"
+          class="rounded-2xl shadow-md w-full max-h-72 object-cover mb-6 interactive-lift"
+        />
+        <p class="text-base text-gray-700 leading-relaxed mb-3">
+          The Nintendo Switch brought Mario back into the mainstream in spectacular fashion. The console launched in 2017 with The Legend of Zelda:
+          Breath of the Wild, but it was Super Mario Odyssey that truly captured the magic of the hybrid console. With its innovative motion controls
+          and creative possession mechanic, Odyssey showed that Mario games could still surprise and delight after all these years.
+        </p>
+        <p class="text-base text-gray-700 leading-relaxed">
+          Since then, the Switch has been home to an incredible lineup of Mario titles. From 2D platformers like Super Mario Maker 2 to the whimsical
+          Super Mario Bros. Wonder, the console has proven itself as the perfect platform for Mario's continued evolution. Whether docked, tabletop,
+          or handheld, Mario feels right at home on the Switch.
+        </p>
+      </div>
+      <div class="flex-1">
+        <img
+          src="/images/nintendo_ds.webp"
+          alt="Nintendo DS console"
+          class="rounded-2xl shadow-md w-full max-h-72 object-cover mb-6 interactive-lift"
+        />
+        <p class="text-base text-gray-700 leading-relaxed mb-3">
+          But the Switch isn't the only console that matters in the Mario legacy. The Nintendo DS revolutionized portable gaming with its dual screens
+          and touch input, giving us gems like New Super Mario Bros. and Mario Kart DS. Before that, the Wii brought motion controls into millions of
+          living rooms with titles like Super Mario Galaxy and New Super Mario Bros. Wii.
+        </p>
+        <p class="text-base text-gray-700 leading-relaxed mb-3">
+          Each generation of consoles has brought new ways to experience Mario. These platforms represent not just technological evolution, but also
+          the creative spirit that has kept the franchise fresh and exciting. From the couch-based experiences of home consoles to the
+          pick-up-and-play nature of handheld systems, Mario has always found a way to be where players are.
+        </p>
+        <p class="text-base text-gray-700 leading-relaxed">
+          That's why this wiki celebrates not just the games themselves, but also the hardware that made them possible. Because understanding Mario
+          means understanding the consoles that brought him to life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz Section -->
+  <section class="no-content-surface bg-[#049CD8] text-white py-12 fade-in-up">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-extrabold mb-4">The great Mario-quiz!</h2>
+      <p id="quiz-question" class="mb-2 text-base leading-relaxed">
+        {quizQuestions[0].question}
+      </p>
+      <p id="quiz-hint" class="mb-4 opacity-80 text-sm">
+        Hint: {quizQuestions[0].hint}
+      </p>
+      <p id="quiz-feedback" class="hidden mb-4 text-sm font-semibold" aria-live="polite"></p>
+      <form id="mario-quiz-form" class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <label for="quiz-answer" class="sr-only">Your quiz answer</label>
+        <input
+          id="quiz-answer"
+          name="quiz-answer"
+          type="text"
+          placeholder="Your answer..."
+          class="rounded-[10px] px-5 py-2 text-[#1a1a1a] text-sm w-full sm:w-72 outline-none focus:ring-2 focus:ring-[#FBD000]"
+          required
+        />
+        <button
+          id="quiz-submit"
+          type="submit"
+          class="bg-[#FBD000] text-[#1a1a1a] font-bold px-6 py-2 rounded-[10px] hover:brightness-110 transition-all interactive-lift"
+        >
+          Submit
+        </button>
+        <button
+          id="quiz-next"
+          type="button"
+          class="bg-white/20 text-white font-bold px-6 py-2 rounded-[10px] hover:bg-white/30 transition-all interactive-lift"
+        >
+          Next question
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ quizQuestions }}>
+    const form = document.getElementById("mario-quiz-form");
+    const questionEl = document.getElementById("quiz-question");
+    const hintEl = document.getElementById("quiz-hint");
+    const feedbackEl = document.getElementById("quiz-feedback");
+    const answerInput = document.getElementById("quiz-answer");
+    const nextButton = document.getElementById("quiz-next");
+
+    let currentIndex = 0;
+
+    const normalizeAnswer = (value) =>
+      value
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9\s]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+
+    const setQuestion = (index) => {
+      currentIndex = index;
+      const item = quizQuestions[currentIndex];
+      questionEl.textContent = item.question;
+      hintEl.textContent = `Hint: ${item.hint}`;
+      feedbackEl.textContent = "";
+      feedbackEl.classList.add("hidden");
+      feedbackEl.classList.remove("text-[#FBD000]", "text-[#ffd6d6]");
+      answerInput.value = "";
+      answerInput.focus();
+    };
+
+    const randomNextIndex = () => {
+      if (quizQuestions.length < 2) return currentIndex;
+      let next = currentIndex;
+      while (next === currentIndex) {
+        next = Math.floor(Math.random() * quizQuestions.length);
+      }
+      return next;
+    };
+
+    form?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const currentQuestion = quizQuestions[currentIndex];
+      const userAnswer = normalizeAnswer(answerInput.value);
+
+      if (!userAnswer) {
+        feedbackEl.classList.remove("hidden");
+        feedbackEl.textContent = "Please type an answer first.";
+        feedbackEl.classList.remove("text-[#FBD000]");
+        feedbackEl.classList.add("text-[#ffd6d6]");
+        return;
+      }
+
+      const isCorrect = currentQuestion.answers.some((accepted) => normalizeAnswer(accepted) === userAnswer);
+
+      if (isCorrect) {
+        feedbackEl.classList.remove("hidden");
+        feedbackEl.textContent = "Correct! Nice one 🍄";
+        feedbackEl.classList.remove("text-[#ffd6d6]");
+        feedbackEl.classList.add("text-[#FBD000]");
+        window.setTimeout(() => setQuestion(randomNextIndex()), 900);
+        return;
+      }
+
+      feedbackEl.classList.remove("hidden");
+      feedbackEl.textContent = "Not quite—try again or jump to a new question.";
+      feedbackEl.classList.remove("text-[#FBD000]");
+      feedbackEl.classList.add("text-[#ffd6d6]");
+    });
+
+    nextButton?.addEventListener("click", () => {
+      setQuestion(randomNextIndex());
+    });
+  </script>
+
+  <!-- Did You Know Section -->
+  <section class="max-w-5xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center gap-10 fade-in-up-delayed">
+    <div class="flex-1">
+      <h2 class="text-3xl font-extrabold text-[#E52521] mb-5">Did you know that...</h2>
+      <p class="text-base text-gray-700 leading-relaxed">
+        The first "non-official" Mario game, <strong>Mario Bros.</strong>, was released back in 1983 as an arcade game? While the Super Mario Bros.
+        game from 1985 is seen as the first official game in the franchise, many forget that this 43-year-old hidden gem is the one that kickstarted
+        the series for good.
+      </p>
+    </div>
+    <div class="flex-1 flex justify-center">
+      <div class="rounded-[1.75rem] p-4 w-full max-w-[18rem] md:max-w-[20rem] interactive-lift">
+        <img src="/images/mario-retro.webp" alt="Picture of old Mario game" class="rounded-2xl w-full max-h-80 object-contain" />
+      </div>
+    </div>
+  </section>
 </MainLayout>

@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -6,10 +6,42 @@
 @import "tailwindcss-intersect";
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  /* Mario-themed color palette */
+  --color-mario-red: #e52521;
+  --color-mario-red-dark: #b81c19;
+  --color-mario-blue: #049cd8;
+  --color-mario-yellow: #fbd000;
+  --color-mario-green: #43b047;
+  --color-mario-dark: #1a1a1a;
+  --color-mario-light: #fff8f0;
+
+  /* Fonts */
+  --font-display: "Press Start 2P", monospace;
+  --font-body: "Nunito", sans-serif;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  main > section {
+    margin-block: 0.9rem;
+  }
+
+  main section:not(.no-content-surface) {
+    background-color: rgb(255 255 255 / 0.94);
+    border: 1px solid rgb(26 26 26 / 0.08);
+    border-radius: 1rem;
+    box-shadow: 0 14px 28px rgb(26 26 26 / 0.08);
+  }
+
+  @media (min-width: 768px) {
+    main > section {
+      margin-block: 1.2rem;
+    }
+  }
+
   *,
   ::after,
   ::before,
@@ -19,9 +51,88 @@
   }
 }
 
-@layer components{
+@layer components {
+  .wiki-image-frame {
+    background: linear-gradient(180deg, #fffdf7 0%, #fff1bb 100%);
+    border: 1px solid rgb(26 26 26 / 0.08);
+    box-shadow: 0 14px 30px rgb(26 26 26 / 0.12);
+  }
 
+  .wiki-image-soft {
+    background: linear-gradient(180deg, #ffffff 0%, #fff6d8 100%);
+    border: 1px solid rgb(26 26 26 / 0.06);
+  }
+
+  .fade-in-up {
+    animation: fade-in-up 0.55s ease-out both;
+  }
+
+  .fade-in-up-delayed {
+    animation: fade-in-up 0.7s ease-out both;
+    animation-delay: 0.12s;
+  }
+
+  .pop-in {
+    animation: pop-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .interactive-lift {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      filter 0.25s ease;
+  }
+
+  .interactive-lift:hover {
+    transform: translateY(-3px);
+  }
+
+  .interactive-link {
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .interactive-link:hover {
+    transform: translateY(-1px);
+  }
 }
-@layer utilities{
-  
+@layer utilities {
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

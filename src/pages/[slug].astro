@@ -1,0 +1,86 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { entries, categoryLabel, type Entry } from "../data/entries";
+
+const transparentImages = new Set([
+  "/images/mario.webp",
+  "/images/mario.png",
+  "/images/luigi.webp",
+  "/images/peach.png",
+  "/images/toad.png",
+  "/images/bowser.webp",
+  "/images/goomba.png",
+  "/images/koopa-troopa.webp",
+  "/images/fireflower.webp",
+  "/images/ice_flower.webp",
+  "/images/mini_mushroom.webp",
+  "/images/super-star.webp",
+  "/images/tanooki-leaf.webp",
+  "/images/cat-bell.webp",
+  "/images/hat.webp",
+  "/images/mushroom.webp",
+]);
+
+export function getStaticPaths() {
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props as { entry: Entry };
+const images = entry.gallery && entry.gallery.length > 0 ? entry.gallery : [entry.image];
+---
+
+<MainLayout title={`${entry.title} — The Great Mushroom Kingdom Wiki`}>
+  <section class="max-w-3xl mx-auto px-6 py-14 fade-in-up">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/" class="hover:text-[#E52521] interactive-link">Home</a>
+      <span class="mx-2">›</span>
+      <a href="/universe" class="hover:text-[#E52521] interactive-link">The universe</a>
+      <span class="mx-2">›</span>
+      <span class="text-[#1a1a1a] font-semibold">{entry.title}</span>
+    </nav>
+
+    <!-- Category badge -->
+    <span class="inline-block bg-[#E52521] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-[10px] mb-4">
+      {categoryLabel[entry.category]}
+    </span>
+
+    <h1 class="text-4xl md:text-5xl font-extrabold text-[#1a1a1a] mb-8 leading-tight">
+      {entry.title}
+    </h1>
+
+    <div
+      class={`grid gap-4 mb-10 ${images.length === 1 ? "max-w-sm" : images.length === 3 ? "sm:grid-cols-3 max-w-3xl" : "sm:grid-cols-2 max-w-2xl"}`}
+    >
+      {
+        images.map((image) => (
+          <div
+            class={
+              transparentImages.has(image)
+                ? "wiki-image-soft rounded-[5px] p-4 interactive-lift"
+                : "rounded-[5px] overflow-hidden shadow-sm bg-white interactive-lift"
+            }
+          >
+            <img
+              src={image}
+              alt={entry.title}
+              class={`w-full ${images.length === 1 ? "h-72" : "h-40"} ${transparentImages.has(image) ? "object-contain" : "object-cover"}`}
+            />
+          </div>
+        ))
+      }
+    </div>
+
+    <p class="text-base text-gray-700 leading-relaxed">
+      {entry.description}
+    </p>
+
+    <!-- Back link -->
+    <a href="/universe" class="inline-flex items-center gap-2 mt-12 text-[#049CD8] font-semibold hover:underline underline-offset-4 interactive-link">
+      ← Back to The universe
+    </a>
+  </section>
+</MainLayout>

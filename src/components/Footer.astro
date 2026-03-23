@@ -1,6 +1,52 @@
 ---
+
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
+
+<div class="bg-[#E52521] text-white mt-16 fade-in-up-delayed">
+  <div class="max-w-5xl mx-auto px-6 py-10">
+    <!-- Newsletter -->
+    <div class="bg-[#B81C19] rounded-[5px] p-6 mb-8 interactive-lift">
+      <p class="font-semibold text-base mb-4">Wanna be a part of our newsletter? Sign up here for weekly articles and join the Mario gang!</p>
+      <form class="flex flex-col sm:flex-row gap-3" aria-label="Newsletter signup">
+        <label for="newsletter-email" class="sr-only">Email address</label>
+        <input
+          id="newsletter-email"
+          name="newsletter-email"
+          type="email"
+          autocomplete="email"
+          placeholder="Enter your email"
+          class="flex-1 rounded-[10px] px-5 py-2 text-[#1a1a1a] text-sm outline-none focus:ring-2 focus:ring-[#FBD000]"
+        />
+        <button
+          type="submit"
+          class="shrink-0 bg-[#FBD000] text-[#1a1a1a] font-bold px-6 py-2 rounded-[10px] hover:brightness-110 transition-all interactive-lift"
+        >
+          Sign up
+        </button>
+      </form>
+      <p class="text-xs text-white/85 mt-3" aria-live="polite"><strong>Demo notice:</strong> newsletter submissions are currently visual only.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="mb-8">
+      <h3 class="text-lg font-bold mb-3">Got any questions? Feel free to contact me!</h3>
+      <p class="text-sm opacity-90">Email: <a href="mailto:sara.ringkow@gmail.com" class="underline hover:opacity-75">sara.ringkow@gmail.com</a></p>
+      <p class="text-sm opacity-90 mt-1">Phone: <a href="tel:+4542428807" class="underline hover:opacity-75">+45 42 42 88 07</a></p>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/30 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="/" class="flex items-center gap-3 interactive-lift">
+        <img src="/favicon.png" alt="Mario logo" class="h-8 w-8 object-contain pop-in" />
+        <span class="font-bold text-sm leading-tight" style="font-family: 'Press Start 2P', monospace;">
+          The Great Mushroom<br />Kingdom Wiki
+        </span>
+      </a>
+      <ul class="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 text-sm font-semibold" aria-label="Footer">
+        <li><a href="/" class="hover:underline underline-offset-4 interactive-link">Home page</a></li>
+        <li><a href="/universe" class="hover:underline underline-offset-4 interactive-link">The universe</a></li>
+        <li><a href="/about" class="hover:underline underline-offset-4 interactive-link">Information</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
-  
