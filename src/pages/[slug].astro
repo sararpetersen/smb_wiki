@@ -4,12 +4,12 @@ import { entries, categoryLabel, type Entry } from "../data/entries";
 
 const transparentImages = new Set([
   "/images/mario.webp",
-  "/images/mario.png",
+  "/images/mario.webp",
   "/images/luigi.webp",
-  "/images/peach.png",
-  "/images/toad.png",
+  "/images/peach.webp",
+  "/images/toad.webp",
   "/images/bowser.webp",
-  "/images/goomba.png",
+  "/images/goomba.webp",
   "/images/koopa-troopa.webp",
   "/images/fireflower.webp",
   "/images/ice_flower.webp",
@@ -40,7 +40,7 @@ const images = entry.gallery && entry.gallery.length > 0 ? entry.gallery : [entr
       <span class="mx-2">›</span>
       <a href="/universe" class="hover:text-[#E52521] interactive-link">The universe</a>
       <span class="mx-2">›</span>
-      <span class="text-[#1a1a1a] font-semibold">{entry.title}</span>
+      <span class="text-mario-dark font-semibold">{entry.title}</span>
     </nav>
 
     <!-- Category badge -->
@@ -48,7 +48,7 @@ const images = entry.gallery && entry.gallery.length > 0 ? entry.gallery : [entr
       {categoryLabel[entry.category]}
     </span>
 
-    <h1 class="text-4xl md:text-5xl font-extrabold text-[#1a1a1a] mb-8 leading-tight">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-mario-dark mb-8 leading-tight">
       {entry.title}
     </h1>
 
@@ -60,8 +60,8 @@ const images = entry.gallery && entry.gallery.length > 0 ? entry.gallery : [entr
           <div
             class={
               transparentImages.has(image)
-                ? "wiki-image-soft rounded-[5px] p-4 interactive-lift"
-                : "rounded-[5px] overflow-hidden shadow-sm bg-white interactive-lift"
+                ? "wiki-image-soft rounded-[5px] p-4 border border-gray-200 interactive-lift"
+                : "rounded-[5px] overflow-hidden border border-gray-200 shadow-sm bg-white interactive-lift"
             }
           >
             <img

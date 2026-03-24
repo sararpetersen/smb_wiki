@@ -17,8 +17,8 @@ export const entries: Entry[] = [
     title: "Nintendo Switch",
     description:
       "Released in March 2017, the Nintendo Switch is a hybrid home/portable console. You can play it on your TV or take it on the go as a handheld. It has become one of Nintendo's best-selling consoles of all time and is home to many great Mario titles.",
-    image: "/images/nintendo-switch.jpg",
-    gallery: ["/images/nintendo-switch.jpg"],
+    image: "/images/switch.webp",
+    gallery: ["/images/switch.webp"],
   },
   {
     slug: "nintendo-ds",
@@ -47,7 +47,7 @@ export const entries: Entry[] = [
     description:
       "The Mario franchise has a cast of beloved main characters. Mario is the heroic plumber who always saves the day. His brother Luigi often joins him on adventures. Princess Peach is the ruler of the Mushroom Kingdom and the one most often in need of rescuing. Toad is her loyal servant.",
     image: "/images/mario.webp",
-    gallery: ["/images/mario.webp", "/images/luigi.webp", "/images/peach.png", "/images/toad.png"],
+    gallery: ["/images/mario.webp", "/images/luigi.webp", "/images/peach.webp", "/images/toad.webp"],
   },
   {
     slug: "monsters-and-villains",
@@ -56,7 +56,7 @@ export const entries: Entry[] = [
     description:
       "The Mushroom Kingdom is full of dangerous creatures. Bowser, the King of the Koopas, is Mario's arch-nemesis and the most recurring villain. Goombas are the most common foot soldiers, while Koopa Troopas are shelled enemies that can be flipped and used as projectiles.",
     image: "/images/bowser.webp",
-    gallery: ["/images/bowser.webp", "/images/goomba.png", "/images/koopa-troopa.webp"],
+    gallery: ["/images/bowser.webp", "/images/goomba.webp", "/images/koopa-troopa.webp"],
   },
 
   // --- Power-ups ---
