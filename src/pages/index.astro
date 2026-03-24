@@ -30,7 +30,12 @@ const quizQuestions = [
 ];
 ---
 
-<MainLayout title="Home — The Great Mushroom Kingdom Wiki">
+<MainLayout
+  title="Home — The Great Mushroom Kingdom Wiki"
+  description="Welcome to The Great Mushroom Kingdom Wiki! Here you'll find everything you need to know about the Mario universe."
+  ogtitle="The Great Mushroom Kingdom Wiki"
+  ogdescription="Welcome to The Great Mushroom Kingdom Wiki! Here you'll find everything you need to know about the Mario universe."
+>
   <!-- Hero Section -->
   <section class="max-w-5xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center gap-10 fade-in-up">
     <div class="flex-1">
@@ -57,7 +62,7 @@ const quizQuestions = [
       <img
         src="/images/front-image.webp"
         alt="Graffiti-art of Mario holding an NES controller"
-        class="rounded-2xl shadow-lg w-full max-w-xs md:max-w-sm max-h-[24rem] object-contain interactive-lift"
+        class="rounded-2xl border border-gray-200 shadow-lg w-full max-w-xs md:max-w-sm max-h-96 object-contain interactive-lift"
       />
     </div>
   </section>
@@ -71,7 +76,7 @@ const quizQuestions = [
         <img
           src="/images/switch3.webp"
           alt="Nintendo Switch gameplay"
-          class="rounded-2xl shadow-md w-full max-h-72 object-cover mb-6 interactive-lift"
+          class="rounded-2xl border border-gray-200 shadow-md w-full max-h-72 object-cover mb-6 interactive-lift"
         />
         <p class="text-base text-gray-700 leading-relaxed mb-3">
           The Nintendo Switch brought Mario back into the mainstream in spectacular fashion. The console launched in 2017 with The Legend of Zelda:
@@ -88,7 +93,7 @@ const quizQuestions = [
         <img
           src="/images/nintendo_ds.webp"
           alt="Nintendo DS console"
-          class="rounded-2xl shadow-md w-full max-h-72 object-cover mb-6 interactive-lift"
+          class="rounded-2xl border border-gray-200 shadow-md w-full max-h-72 object-cover mb-6 interactive-lift"
         />
         <p class="text-base text-gray-700 leading-relaxed mb-3">
           But the Switch isn't the only console that matters in the Mario legacy. The Nintendo DS revolutionized portable gaming with its dual screens
@@ -126,13 +131,13 @@ const quizQuestions = [
           name="quiz-answer"
           type="text"
           placeholder="Your answer..."
-          class="rounded-[10px] px-5 py-2 text-[#1a1a1a] text-sm w-full sm:w-72 outline-none focus:ring-2 focus:ring-[#FBD000]"
+          class="rounded-[10px] px-5 py-2 text-mario-dark text-sm w-full sm:w-72 outline-none focus:ring-2 focus:ring-[#FBD000]"
           required
         />
         <button
           id="quiz-submit"
           type="submit"
-          class="bg-[#FBD000] text-[#1a1a1a] font-bold px-6 py-2 rounded-[10px] hover:brightness-110 transition-all interactive-lift"
+          class="bg-[#FBD000] text-mario-dark font-bold px-6 py-2 rounded-[10px] hover:brightness-110 transition-all interactive-lift"
         >
           Submit
         </button>
@@ -234,7 +239,11 @@ const quizQuestions = [
     </div>
     <div class="flex-1 flex justify-center">
       <div class="rounded-[1.75rem] p-4 w-full max-w-[18rem] md:max-w-[20rem] interactive-lift">
-        <img src="/images/mario-retro.webp" alt="Picture of old Mario game" class="rounded-2xl w-full max-h-80 object-contain" />
+        <img
+          src="/images/mario-retro.webp"
+          alt="Picture of old Mario game"
+          class="rounded-2xl border border-gray-200 w-full max-h-80 object-contain"
+        />
       </div>
     </div>
   </section>

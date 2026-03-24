@@ -25,7 +25,12 @@ const favourites = [
 ];
 ---
 
-<MainLayout title="Information — The Great Mushroom Kingdom Wiki">
+<MainLayout
+  title="Information — The Great Mushroom Kingdom Wiki"
+  description="Learn more about the website and the author behind The Great Mushroom Kingdom Wiki!"
+  ogtitle="Information — The Great Mushroom Kingdom Wiki"
+  ogdescription="Learn more about the website and the author behind The Great Mushroom Kingdom Wiki!"
+>
   <!-- About the site -->
   <section class="max-w-5xl mx-auto px-6 py-14 fade-in-up">
     <h1 class="text-4xl md:text-5xl font-extrabold text-[#E52521] mb-12 leading-tight">Information</h1>
@@ -46,9 +51,9 @@ const favourites = [
           Mushroom Kingdom.
         </p>
       </div>
-      <div class="flex-shrink-0">
+      <div class="shrink-0">
         <div class="rounded-[1.75rem] p-4 w-56 md:w-64 interactive-lift">
-          <img src="/images/hat.webp" alt="A red hat" class="rounded-2xl w-full max-h-56 object-contain" />
+          <img src="/images/hat.webp" alt="A red hat" class="rounded-2xl border border-gray-200 w-full max-h-56 object-contain" />
         </div>
       </div>
     </div>
@@ -74,9 +79,13 @@ const favourites = [
           gaming, or watching YouTube and relaxing at home.
         </p>
       </div>
-      <div class="flex-shrink-0">
+      <div class="shrink-0">
         <div class="rounded-[1.75rem] p-3 w-56 md:w-64 interactive-lift">
-          <img src="/images/portrait.webp" alt="A portrait of a short-haired girl" class="rounded-2xl w-full max-h-72 object-cover" />
+          <img
+            src="/images/portrait.webp"
+            alt="A portrait of a short-haired girl"
+            class="rounded-2xl border border-gray-200 w-full max-h-72 object-cover"
+          />
         </div>
       </div>
     </div>
@@ -105,7 +114,11 @@ const favourites = [
         </ol>
       </div>
       <div class="shrink-0">
-        <img src="/images/game.webp" alt="A Nintendo Switch game" class="rounded-2xl shadow-md w-56 md:w-64 max-h-72 object-cover interactive-lift" />
+        <img
+          src="/images/game.webp"
+          alt="A Nintendo Switch game"
+          class="rounded-2xl border border-gray-200 shadow-md w-56 md:w-64 max-h-72 object-cover interactive-lift"
+        />
       </div>
     </div>
   </section>

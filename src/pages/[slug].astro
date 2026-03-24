@@ -32,7 +32,12 @@ const { entry } = Astro.props as { entry: Entry };
 const images = entry.gallery && entry.gallery.length > 0 ? entry.gallery : [entry.image];
 ---
 
-<MainLayout title={`${entry.title} — The Great Mushroom Kingdom Wiki`}>
+<MainLayout
+  title={`${entry.title} — The Great Mushroom Kingdom Wiki`}
+  description={entry.description}
+  ogtitle={`${entry.title} — The Great Mushroom Kingdom Wiki`}
+  ogdescription={entry.description}
+>
   <section class="max-w-3xl mx-auto px-6 py-14 fade-in-up">
     <!-- Breadcrumb -->
     <nav class="text-sm text-gray-500 mb-6">
