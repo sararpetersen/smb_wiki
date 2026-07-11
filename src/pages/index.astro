@@ -13,7 +13,7 @@ const quizQuestions = [
     answers: ["super mario odyssey", "mario odyssey"],
   },
   {
-    question: "Who is the ruler of the Mushroom Kingdom?",
+    question: "Who's the ruler of the Mushroom Kingdom?",
     hint: "She's often rescued by Mario.",
     answers: ["princess peach", "peach", "princess toadstool"],
   },
@@ -31,21 +31,21 @@ const quizQuestions = [
 ---
 
 <MainLayout
-  title="Home — The Great Mushroom Kingdom Wiki"
+  title="Home | The Great Mushroom Kingdom Wiki"
   description="Welcome to The Great Mushroom Kingdom Wiki! Here you'll find everything you need to know about the Mario universe."
-  ogtitle="The Great Mushroom Kingdom Wiki"
-  ogdescription="Welcome to The Great Mushroom Kingdom Wiki! Here you'll find everything you need to know about the Mario universe."
+  ogtitle="Ready to enter the Mushroom Kingdom? 🍄"
+  ogdescription="Explore Mario's games, characters, power-ups, and consoles in this colourful fan-made corner of the Mushroom Kingdom."
 >
   <!-- Hero Section -->
-  <section class="max-w-5xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center gap-10 fade-in-up">
+  <section data-animate class="max-w-5xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center gap-10">
     <div class="flex-1">
       <h1 class="text-4xl md:text-5xl font-extrabold text-[#E52521] mb-6 leading-tight">Welcome!</h1>
       <p class="text-lg leading-relaxed mb-4">
         Here on the great Mushroom Kingdom wiki, you'll find almost all things Mario and consoles. Go to the <a
           href="/universe"
-          class="text-[#E52521] font-semibold underline underline-offset-4 hover:text-[#B81C19] interactive-link">Universe</a
-        > menu to find the different wiki pages or the
-        <a href="/about" class="text-[#E52521] font-semibold underline underline-offset-4 hover:text-[#B81C19] interactive-link">Information</a> page to
+          class="text-[#E52521] font-semibold underline underline-offset-4 hover:text-[#B81C19] interactive-link">universe</a
+        > menu to find the different wiki pages or the {" "}
+        <a href="/about" class="text-[#E52521] font-semibold underline underline-offset-4 hover:text-[#B81C19] interactive-link">information</a> page to
         learn more about the website!
       </p>
       <p class="text-base text-gray-700 leading-relaxed mb-3">
@@ -54,21 +54,21 @@ const quizQuestions = [
         you'll find everything you need to explore the Mushroom Kingdom.
       </p>
       <p class="text-base text-gray-700 leading-relaxed">
-        This wiki celebrates the franchise in all its forms— from the classic pixel-art era to modern masterpieces. Discover the power-ups that have
-        saved the day, the villains that have caused chaos, and the consoles that brought these adventures to life.
+        This wiki celebrates the franchise in all its forms&mdash; from the classic pixel-art era to modern masterpieces. Discover the power-ups that
+        have saved the day, the villains that have caused mayhem, and the consoles that brought these adventures to life.
       </p>
     </div>
     <div class="flex-1 flex justify-center">
       <img
         src="/images/front-image.webp"
         alt="Graffiti-art of Mario holding an NES controller"
-        class="rounded-2xl border border-gray-200 shadow-lg w-full max-w-xs md:max-w-sm max-h-96 object-contain interactive-lift"
+        class="rounded-2xl border border-gray-200 shadow-lg w-full max-w-xs md:max-w-sm max-h-96 object-contain"
       />
     </div>
   </section>
 
   <!-- Consoles that shaped Mario Section -->
-  <section class="max-w-5xl mx-auto px-6 py-14 fade-in-up-delayed">
+  <section data-animate class="max-w-5xl mx-auto px-6 py-14">
     <h2 class="text-3xl font-extrabold text-[#E52521] mb-3">Consoles that shaped Mario</h2>
     <p class="text-base text-gray-700 leading-relaxed mb-8">A quick look at the Nintendo systems that helped define different eras of Mario games.</p>
     <div class="flex flex-col md:flex-row gap-10 items-start">
@@ -76,29 +76,30 @@ const quizQuestions = [
         <img
           src="/images/switch3.webp"
           alt="Nintendo Switch gameplay"
-          class="rounded-2xl border border-gray-200 shadow-md w-full max-h-72 object-cover mb-6 interactive-lift"
+          class="rounded-2xl border border-gray-200 shadow-md w-full max-h-72 object-cover mb-6"
         />
         <p class="text-base text-gray-700 leading-relaxed mb-3">
-          The Nintendo Switch brought Mario back into the mainstream in spectacular fashion. The console launched in 2017 with The Legend of Zelda:
-          Breath of the Wild, but it was Super Mario Odyssey that truly captured the magic of the hybrid console. With its innovative motion controls
-          and creative possession mechanic, Odyssey showed that Mario games could still surprise and delight after all these years.
+          The Nintendo Switch brought Mario back into the mainstream in spectacular fashion. The console launched in 2017 with <em
+            >'The Legend of Zelda: Breath of the Wild'</em
+          >, but it was <em>'Super Mario Odyssey'</em> that truly captured the magic of the hybrid console. With its innovative motion controls and creative
+          possession mechanic, Odyssey showed that Mario games could still surprise and delight after all these years.
         </p>
         <p class="text-base text-gray-700 leading-relaxed">
-          Since then, the Switch has been home to an incredible lineup of Mario titles. From 2D platformers like Super Mario Maker 2 to the whimsical
-          Super Mario Bros. Wonder, the console has proven itself as the perfect platform for Mario's continued evolution. Whether docked, tabletop,
-          or handheld, Mario feels right at home on the Switch.
+          Since then, the Switch has been home to an incredible lineup of Mario titles. From 2D platformers like <em>'Super Mario Maker 2'</em> to the whimsical
+          <em>'Super Mario Bros. Wonder'</em>, the console has proven itself as the perfect platform for Mario's continued evolution. Whether docked,
+          tabletop, or handheld, Mario feels right at home on the Switch.
         </p>
       </div>
       <div class="flex-1">
         <img
           src="/images/nintendo_ds.webp"
           alt="Nintendo DS console"
-          class="rounded-2xl border border-gray-200 shadow-md w-full max-h-72 object-cover mb-6 interactive-lift"
+          class="rounded-2xl border border-gray-200 shadow-md w-full max-h-72 object-cover mb-6"
         />
         <p class="text-base text-gray-700 leading-relaxed mb-3">
-          But the Switch isn't the only console that matters in the Mario legacy. The Nintendo DS revolutionized portable gaming with its dual screens
-          and touch input, giving us gems like New Super Mario Bros. and Mario Kart DS. Before that, the Wii brought motion controls into millions of
-          living rooms with titles like Super Mario Galaxy and New Super Mario Bros. Wii.
+          But the Switch isn't the only console that matters in the Mario legacy. The Nintendo DS revolutionised portable gaming with its dual screens
+          and touch input, giving us gems like <em>'New Super Mario Bros.'</em> and <em>'Mario Kart DS'</em>. Before that, the Wii brought motion
+          controls into millions of living rooms with titles like <em>'Super Mario Galaxy'</em> and <em>'New Super Mario Bros. Wii'</em>.
         </p>
         <p class="text-base text-gray-700 leading-relaxed mb-3">
           Each generation of consoles has brought new ways to experience Mario. These platforms represent not just technological evolution, but also
@@ -114,7 +115,7 @@ const quizQuestions = [
   </section>
 
   <!-- Quiz Section -->
-  <section class="no-content-surface bg-[#049CD8] text-white py-12 fade-in-up">
+  <section data-animate class="no-content-surface bg-[#02749F] text-white py-12">
     <div class="max-w-2xl mx-auto px-6 text-center">
       <h2 class="text-2xl font-extrabold mb-4">The great Mario-quiz!</h2>
       <p id="quiz-question" class="mb-2 text-base leading-relaxed">
@@ -228,17 +229,17 @@ const quizQuestions = [
   </script>
 
   <!-- Did You Know Section -->
-  <section class="max-w-5xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center gap-10 fade-in-up-delayed">
+  <section data-animate class="max-w-5xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center gap-10">
     <div class="flex-1">
       <h2 class="text-3xl font-extrabold text-[#E52521] mb-5">Did you know that...</h2>
       <p class="text-base text-gray-700 leading-relaxed">
-        The first "non-official" Mario game, <strong>Mario Bros.</strong>, was released back in 1983 as an arcade game? While the Super Mario Bros.
-        game from 1985 is seen as the first official game in the franchise, many forget that this 43-year-old hidden gem is the one that kickstarted
-        the series for good.
+        The first <em>"non-official"</em> Mario game, <strong>Mario Bros.</strong>, was released back in 1983 as an arcade game? While the Super Mario
+        Bros. game from 1985 is seen as the first official game in the franchise, many forget that this 43-year-old hidden gem is the one that
+        kickstarted the series for good.
       </p>
     </div>
     <div class="flex-1 flex justify-center">
-      <div class="rounded-[1.75rem] p-4 w-full max-w-[18rem] md:max-w-[20rem] interactive-lift">
+      <div class="rounded-[1.75rem] p-4 w-full max-w-[18rem] md:max-w-[20rem]">
         <img
           src="/images/mario-retro.webp"
           alt="Picture of old Mario game"

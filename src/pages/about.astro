@@ -4,47 +4,47 @@ import MainLayout from "../layouts/MainLayout.astro";
 const favourites = [
   {
     title: "Mario Kart 8 Deluxe",
-    note: "The easiest one to return to when I just want something fun and familiar.",
+    note: "The easiest one to return to when I just want to play something I'm familiar with",
   },
   {
     title: "Paper Mario: The Origami King",
-    note: "I love the visual style and the more story-driven side of the Mario universe.",
+    note: "I love the visual style and the more story-driven side of the Mario universe",
   },
   {
     title: "Mario + Rabbids: Kingdom Battle",
-    note: "A slightly unexpected crossover, but one I ended up enjoying a lot.",
+    note: "A slightly unexpected crossover, but one I ended up enjoying a lot",
   },
   {
     title: "Super Mario 3D All-Stars",
-    note: "A nostalgic collection that makes it easy to jump between different eras of Mario.",
+    note: "A nostalgic collection that makes it easy to jump between different eras of Mario",
   },
   {
     title: "Super Mario 3D World + Bowser's Fury",
-    note: "Probably one of the most fun modern Mario experiences for me overall.",
+    note: "Probably one of the most fun modern Mario experiences for me overall",
   },
 ];
 ---
 
 <MainLayout
-  title="Information — The Great Mushroom Kingdom Wiki"
+  title="Information | The Great Mushroom Kingdom Wiki"
   description="Learn more about the website and the author behind The Great Mushroom Kingdom Wiki!"
-  ogtitle="Information — The Great Mushroom Kingdom Wiki"
-  ogdescription="Learn more about the website and the author behind The Great Mushroom Kingdom Wiki!"
+  ogtitle="The story behind this Mario fan wiki"
+  ogdescription="Meet the creator and discover how a school project grew into a personal celebration of the Mushroom Kingdom."
 >
   <!-- About the site -->
-  <section class="max-w-5xl mx-auto px-6 py-14 fade-in-up">
+  <section data-animate class="max-w-5xl mx-auto px-6 py-14">
     <h1 class="text-4xl md:text-5xl font-extrabold text-[#E52521] mb-12 leading-tight">Information</h1>
 
     <div class="flex flex-col md:flex-row gap-10 items-start">
       <div class="flex-1">
         <h2 class="text-2xl font-bold mb-4">About the site</h2>
         <p class="text-base text-gray-700 leading-relaxed mb-3">
-          This website originally started as a school project, where I had to choose a subject I cared about and build a site around it from scratch.
-          Since Super Mario has always been one of my comfort franchises, it felt like the obvious choice.
+          This website originally started as a school project, where we had to choose a subject we cared about and build a site around it from
+          scratch. Since Super Mario has always been one of my comfort franchises, I chose that, as it just felt like the obvious choice.
         </p>
         <p class="text-base text-gray-700 leading-relaxed mb-3">
-          The version you're looking at now is a refreshed take on that idea. Instead of leaving it as an old assignment, I wanted to turn it into a
-          cleaner and more personal Mario wiki with updated pages, better structure, and room to grow over time.
+          The version you're looking at now is a refreshed take on that idea. Instead of just leaving it as an old assignment, I wanted to turn it
+          into a cleaner and more personal Mario wiki with updated pages, better structure, and room to grow over time.
         </p>
         <p class="text-base text-gray-700 leading-relaxed">
           So this site is partly a fan project, partly a design/development exercise, and partly just an excuse for me to spend more time in the
@@ -52,7 +52,7 @@ const favourites = [
         </p>
       </div>
       <div class="shrink-0">
-        <div class="rounded-[1.75rem] p-4 w-56 md:w-64 interactive-lift">
+        <div class="rounded-[1.75rem] p-4 w-56 md:w-64">
           <img src="/images/hat.webp" alt="A red hat" class="rounded-2xl border border-gray-200 w-full max-h-56 object-contain" />
         </div>
       </div>
@@ -60,27 +60,25 @@ const favourites = [
   </section>
 
   <!-- About the author -->
-  <section class="max-w-5xl mx-auto px-6 py-14 fade-in-up-delayed">
+  <section data-animate class="max-w-5xl mx-auto px-6 py-14">
     <div class="flex flex-col md:flex-row-reverse gap-10 items-start">
       <div class="flex-1">
-        <h2 class="text-2xl font-bold mb-4">About me (the author)</h2>
+        <h2 class="text-2xl font-bold mb-4">About me <em>(the author)</em></h2>
+        <p class="text-base text-gray-700 leading-relaxed mb-3">My name is Sara, a Multimedia Designer and Concept Developer based in Copenhagen.</p>
         <p class="text-base text-gray-700 leading-relaxed mb-3">
-          My name is Sara, I'm 24 years old, and come from Denmark. I previously studied Multimedia Design at KEA, and am now currently studying
-          Digital Concept Development at Zealand.
-        </p>
-        <p class="text-base text-gray-700 leading-relaxed mb-3">
-          I'm interested in design, coding, and how digital experiences can feel both clear and personal. I also enjoy creative work in general,
+          I'm interested in design, coding, and how digital experiences can feel both clear and personal. I also just enjoy creative work in general,
           especially drawing, writing, and building visual ideas from scratch. My first real Mario game was <strong>New Super Mario Bros.</strong>
-          for the Nintendo DS, and since then the series has stayed one of my biggest comfort franchises. I love how playful, colorful, and imaginative
+          {""} for the Nintendo DS, and since then the series has stayed one of my biggest comfort franchises. I love how playful, colorful, and imaginative
           that universe feels.
         </p>
+
         <p class="text-base text-gray-700 leading-relaxed">
-          Alongside my studies, I work as a Student Buddy at my university. Outside of school and project work, I usually spend my time reading,
-          gaming, or watching YouTube and relaxing at home.
+          Over the years, a handful of Mario games have stood out to me for very different reasons&mdash; some for their stories, others for their
+          creativity, nostalgia, or sheer sense of fun. Below, I've gathered five favourites that have shaped my connection to the series.
         </p>
       </div>
       <div class="shrink-0">
-        <div class="rounded-[1.75rem] p-3 w-56 md:w-64 interactive-lift">
+        <div class="rounded-[1.75rem] p-3 w-56 md:w-64">
           <img
             src="/images/portrait.webp"
             alt="A portrait of a short-haired girl"
@@ -92,7 +90,7 @@ const favourites = [
   </section>
 
   <!-- Favourite Games -->
-  <section class="max-w-5xl mx-auto px-6 py-14 fade-in-up">
+  <section data-animate class="max-w-5xl mx-auto px-6 py-14">
     <div class="flex flex-col md:flex-row gap-10 items-start">
       <div class="flex-1">
         <h2 class="text-2xl font-bold mb-1">5 Mario games I keep coming back to</h2>
@@ -100,7 +98,7 @@ const favourites = [
         <ol class="space-y-3">
           {
             favourites.map((game, i) => (
-              <li class="bg-[#FFF8F0] border border-[#E52521]/15 rounded-[5px] px-5 py-4 shadow-md interactive-lift">
+              <li class="bg-[#FFF8F0] border border-[#E52521]/15 rounded-[5px] px-5 py-4 shadow-md">
                 <div class="flex items-start gap-4">
                   <span class="text-[#E52521] font-extrabold text-lg w-6 text-center shrink-0">{i + 1}</span>
                   <div>
@@ -117,7 +115,7 @@ const favourites = [
         <img
           src="/images/game.webp"
           alt="A Nintendo Switch game"
-          class="rounded-2xl border border-gray-200 shadow-md w-56 md:w-64 max-h-72 object-cover interactive-lift"
+          class="rounded-2xl border border-gray-200 shadow-md w-56 md:w-64 max-h-72 object-cover"
         />
       </div>
     </div>
